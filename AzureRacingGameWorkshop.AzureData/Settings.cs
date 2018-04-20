@@ -8,11 +8,11 @@ namespace AzureRacingGameWorkshop.AzureData
 public class Settings
 {
     // Player Name
-    public static string PlayerName = "@willieisreal";
+    public static string PlayerName = "YOUR_NAME";
 
     // Storage Account
-    public static string StorageAccountName = "gabracing2018storage";
-    public static string StorageAccountKey = "IIpWLR6ui+yFa2OM1F4o/V1EVHUF2reV9QBK4bstEhN6Nvmj8eG3K2/u2JsAmfPEOXmu4SB7gWiMGs4kzEzRDw==";
+    public static string StorageAccountName = "";
+    public static string StorageAccountKey = "";
 
 
         // Development Storage
