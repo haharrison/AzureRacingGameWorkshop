@@ -12,7 +12,6 @@ namespace AzureRacingGameWorkshop.AzureData
 
         // Storage Account
         public static string StorageAccountName = "";
-        // IIpWLR6ui+yFa2OM1F4o/V1EVHUF2reV9QBK4bstEhN6Nvmj8eG3K2/u2JsAmfPEOXmu4SB7gWiMGs4kzEzRDw==
         public static string StorageAccountKey = "";
 
 
