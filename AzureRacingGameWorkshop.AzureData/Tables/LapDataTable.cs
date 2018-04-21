@@ -100,56 +100,56 @@ namespace AzureRacingGameWorkshop.AzureData.Tables
         {
             Debug.WriteLine(">>LapDataTable.InsertOrReplaceDriverLapData");
 
-            //try
-            //{
+            try
+            {
 
-            //    CloudTable table = m_TableClient.GetTableReference
-            //   (GetPlayerLapTableName(lapData.Level));
+                //    CloudTable table = m_TableClient.GetTableReference
+                //   (GetPlayerLapTableName(lapData.Level));
 
-            //    DynamicTableEntity sectorTimesEntity =
-            //        new DynamicTableEntity(lapData.PlayerName,
-            //        Utils.GetDescendingRowKey(lapData.GameStartTime));
+                //    DynamicTableEntity sectorTimesEntity =
+                //        new DynamicTableEntity(lapData.PlayerName,
+                //        Utils.GetDescendingRowKey(lapData.GameStartTime));
 
-            //    sectorTimesEntity.Properties.Add
-            //        ("PlayerName", new EntityProperty(lapData.PlayerName));
-            //    sectorTimesEntity.Properties.Add
-            //        ("LapStartTime", new EntityProperty(lapData.GameStartTime));
-            //    sectorTimesEntity.Properties.Add
-            //        ("Level", new EntityProperty(lapData.Level));
-            //    sectorTimesEntity.Properties.Add
-            //        ("CarType", new EntityProperty(lapData.CarType));
-            //    sectorTimesEntity.Properties.Add
-            //        ("Dammage", new EntityProperty(lapData.Dammage));
-            //    sectorTimesEntity.Properties.Add
-            //        ("LapId", new EntityProperty(lapData.LapId));
-            //    sectorTimesEntity.Properties.Add
-            //        ("LapTimeMs", new EntityProperty(lapData.LapTimeMs));
+                //    sectorTimesEntity.Properties.Add
+                //        ("PlayerName", new EntityProperty(lapData.PlayerName));
+                //    sectorTimesEntity.Properties.Add
+                //        ("LapStartTime", new EntityProperty(lapData.GameStartTime));
+                //    sectorTimesEntity.Properties.Add
+                //        ("Level", new EntityProperty(lapData.Level));
+                //    sectorTimesEntity.Properties.Add
+                //        ("CarType", new EntityProperty(lapData.CarType));
+                //    sectorTimesEntity.Properties.Add
+                //        ("Dammage", new EntityProperty(lapData.Dammage));
+                //    sectorTimesEntity.Properties.Add
+                //        ("LapId", new EntityProperty(lapData.LapId));
+                //    sectorTimesEntity.Properties.Add
+                //        ("LapTimeMs", new EntityProperty(lapData.LapTimeMs));
 
-            //    int sector = 1;
-            //    foreach (int sectorTime in lapData.SectorTimesMs)
-            //    {
-            //        sectorTimesEntity.Properties.Add
-            //            ("Sector" + sector.ToString().PadLeft(2, '0'),
-            //            new EntityProperty(sectorTime));
-            //        sector++;
-            //    }
+                //    int sector = 1;
+                //    foreach (int sectorTime in lapData.SectorTimesMs)
+                //    {
+                //        sectorTimesEntity.Properties.Add
+                //            ("Sector" + sector.ToString().PadLeft(2, '0'),
+                //            new EntityProperty(sectorTime));
+                //        sector++;
+                //    }
 
-            //    TableOperation insertOrReplaceOp =
-            //    TableOperation.InsertOrReplace(sectorTimesEntity);
+                //    TableOperation insertOrReplaceOp =
+                //    TableOperation.InsertOrReplace(sectorTimesEntity);
 
-            //    table.BeginExecute(insertOrReplaceOp, null, null);
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine(ex.Message);
-            //}
+                //    table.BeginExecute(insertOrReplaceOp, null, null);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
 
         public List<LapData> GetTopLapTimes(int level, int number, bool bestLapOnly)
         {
             Debug.WriteLine(">>LapDataTable.GetTopLapTimes");
 
-            //return new List<LapData>();
+            return new List<LapData>();
 
             CloudTable table = m_TableClient.GetTableReference(Settings.RankingLapTimesTableName);
 
